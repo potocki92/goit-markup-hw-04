@@ -86,7 +86,21 @@ body {
 *************************************
 
 */
-
+/*
+  space between link__container and contact__container
+*/
+.wrapper {
+  justify-content: space-between;
+}
+/*
+  container with logo and navigation links
+*/
+.links__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 93px;
+}
 /* logo link */
 .logo__link {
   font-family: "Raleway";
@@ -96,7 +110,6 @@ body {
   font-style: normal;
   letter-spacing: var(--second-letter-spacing);
   color: #000000;
-  padding-right: 93px;
 }
 /* span color */
 .logo__link .logo__web {
@@ -139,14 +152,6 @@ body {
   color: var(--third-color);
 }
 
-/* 
-  container with contact links 
-  email and phone-number are right of the .container
-*/
-.header__container .container .contact__container {
-  /* if you wanna positioning contact container to the right */
-  margin-left: auto;
-}
 /*
   header padding
   space bettween top and bottom 
@@ -211,7 +216,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  justify-content: space-around;
 }
 /* 
 
@@ -304,7 +309,7 @@ body {
   /* background of title container */
   background: #2f303a; /* if images doesn't work */
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  url("/images/backgrounds/title-background.jpg") no-repeat center top;
+    url("/images/backgrounds/title-background.jpg") no-repeat center top;
   /* background-image: linear-gradient(rgba(47, 48, 58, 0.4)); */
   background-size: cover;
   /*
@@ -436,12 +441,6 @@ body {
 .team__container {
   background: var(--fourth-color);
 }
-/* 
-  one div with all team card
-*/
-.team__box {
-  display: inline-flex;
-}
 /*
   team card with image, 
   team name and team profession 
@@ -529,13 +528,13 @@ body {
   button list
 */
 .filters__list {
+  justify-content: center;
   gap: 4px;
 }
 /*
   buttons display 
 */
 .filters__item {
-  display: inline-flex;
   margin: 0 4px 50px;
 }
 /* 
