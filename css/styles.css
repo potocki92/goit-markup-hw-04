@@ -301,8 +301,12 @@ body {
  */
 .title__container {
   position: relative;
-  /* background color of title container */
-  background: #2f303a;
+  /* background of title container */
+  background: #2f303a; /* if images doesn't work */
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url("/images/backgrounds/title-background.jpg") no-repeat center top;
+  /* background-image: linear-gradient(rgba(47, 48, 58, 0.4)); */
+  background-size: cover;
   /*
     to center the text and button when zoomed in
   */
@@ -313,13 +317,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 200px 0;
-}
-
-.title__background {
-  position: absolute;
-  max-width: 1600px;
-  height: 100%;
-  display: block;
 }
 /*
   main title 
