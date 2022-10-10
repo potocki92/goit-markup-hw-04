@@ -155,7 +155,6 @@ body {
   padding: 20px 0;
 }
 
-
 /*
   footer padding and gap to flex list class and logo__container
   space bettween top and bottom 
@@ -301,6 +300,7 @@ body {
   main title and button
  */
 .title__container {
+  position: relative;
   /* background color of title container */
   background: #2f303a;
   /*
@@ -314,6 +314,13 @@ body {
   align-items: center;
   padding: 200px 0;
 }
+
+.title__background {
+  position: absolute;
+  max-width: 1600px;
+  height: 100%;
+  display: block;
+}
 /*
   main title 
 */
@@ -324,7 +331,8 @@ body {
   font-size: 44px;
   font-weight: 900;
   line-height: 1.4;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
+  z-index: 1;
 }
 /* 
   button 
@@ -339,11 +347,13 @@ body {
   color: var(--first-color);
   font-family: "Roboto";
   font-weight: var(--second-weight);
+  font-size: 16px;
   line-height: var(--second-line-height);
   letter-spacing: var(--first-letter-spacing);
   /* other */
   cursor: pointer;
-  padding: 10px 42px;
+  padding: 10px 42px 10px 41px;
+  z-index: 1;
 }
 
 /* 
@@ -563,4 +573,3 @@ body {
   border-left: var(--border);
   border-right: var(--border);
 }
-
