@@ -97,9 +97,9 @@ body {
 */
 .links__container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 93px;
+  gap: calc(6vw + 2px);
 }
 /* logo link */
 .logo__link {
