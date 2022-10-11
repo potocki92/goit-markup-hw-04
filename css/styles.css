@@ -97,9 +97,9 @@ body {
 */
 .links__container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 93px;
+  gap: calc(6vw + 2px);
 }
 /* logo link */
 .logo__link {
@@ -143,8 +143,11 @@ body {
 .nav__link:hover,
 .nav__link:focus,
 .contact__link:hover,
-.contact__link:focus {
+.contact__link:focus,
+.contact__item:hover,
+.contact__item:focus   {
   color: var(--second-color);
+  --color: var(--second-color);
 }
 
 /* contact link color text  */
@@ -446,6 +449,9 @@ body {
   team name and team profession 
 */
 .team__card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background: var(--first-color);
   /* shadow under the containers with a photo, 
      name and profession of the team 
@@ -453,12 +459,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-/*
-  container with heading and paragraph text about team
-*/
-.team__text {
-  padding: 30px 0 30px 0;
 }
 /* 
   team heading text 
@@ -568,4 +568,51 @@ body {
   border-bottom: var(--border);
   border-left: var(--border);
   border-right: var(--border);
+}
+
+
+
+/*=============================================================================================*/
+
+/*GOIT_4 ZADANIE*/
+
+/*
+  positioning svg icon with feature__container
+
+*/
+.feature__icon {
+  background: #F5F4FA;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+/*
+  positioning svg and text into contact__link
+*/
+.contact__link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.team__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 0 30px 0;
+}
+/*
+  now icons from team__cards have clickable 
+*/
+.contact__icon .icon {
+  cursor: pointer;
+}
+.contact__icon .icon:hover {
+  --color-background: #2196F3;
+  --color: #FFFFFF;
 }
