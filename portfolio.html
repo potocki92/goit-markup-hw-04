@@ -246,37 +246,55 @@
     <!-- end main -->
     <!-- start footer -->
     <footer class="footer__container">
-      <!--
-        height: 100%;
-        width: 1170px;
-        margin: auto;
-        padding: 94px 0;
-      -->
-      <div class="container">
-        <!-- logo -->
-        <div class="logo__container">
-          <a href="./index.html" class="logo__link link"
-            ><span class="logo__web">Web</span>Studio</a
-          >
+      <div class="footer__box container">
+        <!-- container with logo + contact -->
+        <div class="footer__info">
+          <!-- logo -->
+          <div class="logo__container">
+            <a href="./index.html" class="logo__link link"
+              ><span class="logo__web">Web</span>Studio</a
+            >
+          </div>
+          <!-- address to coresponde -->
+          <address class="contact__footer">
+            <ul class="contact__list list">
+              <li class="contact__item item">
+                m. Warszawa, Aleje Jerozolimskie 21
+              </li>
+              <li class="contact__item item">
+                <a class="contact__link link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="contact__item item">
+                <a class="contact__link link" href="tel:+48111111111"
+                  >+48 111 111 111</a
+                >
+              </li>
+            </ul>
+          </address>
+          <!-- end address to coresponde -->
         </div>
-        <!-- address to coresponde -->
-        <address class="contact__footer">
-          <ul class="contact__list list">
-            <li class="contact__item item">
-              m. Warszawa, Aleje Jerozolimskie 21
-            </li>
-            <li class="contact__item item">
-              <a class="contact__link link" href="mailto:info@example.com"
-                >info@example.com</a
-              >
-            </li>
-            <li class="contact__item item">
-              <a class="contact__link link" href="tel:+48111111111"
-                >+48 111 111 111</a
-              >
-            </li>
-          </ul>
-        </address>
+        <!-- end container with logo + contact -->
+        <!-- start social container -->
+        <div class="footer__social">
+          <span class="social__text">Dołącz do nas</span>
+          <div class="contact__icon">
+            <svg class="icon" height="44px" width="44px">
+              <use href="./images/svg/team/instagram.svg#instagram"></use>
+            </svg>
+            <svg class="icon" height="44px" width="44px">
+              <use href="./images/svg/team/tweeter.svg#tweeter"></use>
+            </svg>
+            <svg class="icon" height="44px" width="44px">
+              <use href="./images/svg/team/facebook.svg#facebook"></use>
+            </svg>
+            <svg class="icon" height="44px" width="44px">
+              <use href="./images/svg/team/linkedin.svg#linkedin"></use>
+            </svg>
+          </div>
+        </div>
+        <!-- end social container -->
       </div>
     </footer>
     <!-- end footer -->
