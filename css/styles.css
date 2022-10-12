@@ -150,6 +150,11 @@ body {
 
 /* contact link color text  */
 .contact__link {
+  /* positioning svg and text into contact__link */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* color text */
   color: var(--third-color);
 }
 
@@ -283,6 +288,76 @@ body {
   font-style: normal;
   line-height: var(--first-line-height);
 }
+/*
+  container with social__text and icons
+*/
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 72px 0 100px 0;
+}
+.footer__social .contact__icon .icon {
+  --color-background: rgba(255, 255, 255, 0.1);
+  --color: var(--first-color);
+}
+/*
+  text into footer__social
+*/
+.social__text {
+  font-weight: var(--second-weight);
+  line-height: 1.142;
+  letter-spacing: var(--second-letter-spacing);
+  text-transform: uppercase;
+  color: var(--first-color);
+}
+/*
+  social icons into footer container 
+*/
+.footer__social .contact__icon {
+  display: flex;
+  padding: 0;
+}
+/*
+  change color icon and background color icon into footer container
+*/
+.contact__icon .icon:hover,
+.footer__social .contact__icon .icon:hover {
+  --color-background: var(--second-color);
+  --color: var(--first-color);
+}
+/*
+  container with logo and contact into footer container
+*/
+.footer__info {
+  padding: 60px 0;
+}
+/* 
+
+*************************************
+
+            SOCIAL ICONS
+
+*************************************
+
+*/
+/*
+  container with icons into team and footer 
+  (instagram, tweeter, facebook and linkedin)
+*/
+.contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 0 30px 0;
+}
+/*
+  now icons from team__cards have clickable 
+*/
+.contact__icon .icon {
+  cursor: pointer;
+}
 /* 
 =====================================
 =====================================
@@ -401,6 +476,15 @@ body {
 .feature__container .feature__box .feature__text {
   padding-bottom: 10px;
 }
+/*
+  positioning svg icon with feature__container
+
+*/
+.feature__icon {
+  background: #f5f4fa;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
 /* 
 
 *************************************
@@ -484,6 +568,55 @@ body {
   /* center text */
   text-align: center;
 }
+/*
+  container with team__text and contact__icon 
+*/
+.team__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/* 
+
+*************************************
+
+        CONTAINER WITH CUSTOMERS
+
+*************************************
+
+*/
+/*
+  tags with customers boxes
+*/
+.customer__team {
+  display: flex;
+  justify-content: center;
+}
+/*
+  item with customer icons
+*/
+.customer__box {
+  display: flex;
+  padding: 17.71px 32px 14.25px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*
+  change bored color when user hovering or focusing customer__box
+*/
+.customer__box:hover,
+.customer__box:focus {
+  border: 1px solid var(--second-color);
+}
+/*
+  change svg color when user hovering or focusing customer__box
+*/
+.customer__box:hover .icon,
+.customer__box:focus .icon {
+  color: var(--second-color);
+  --color: var(--second-color);
+}
 
 /* 
 =====================================
@@ -537,6 +670,21 @@ body {
 .filters__item {
   margin: 0 4px 50px;
 }
+/*
+  now user can hover and focus boxes with projects 
+*/
+.projects__item {
+  cursor: pointer;
+  /*
+    when user hovering or focusing box with project 
+    shadow will be showing around the boxes   
+  */
+}
+.projects__item:hover,
+.projects__item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /* 
   projects heading 
 */
@@ -568,130 +716,4 @@ body {
   border-bottom: var(--border);
   border-left: var(--border);
   border-right: var(--border);
-}
-
-/*=============================================================================================*/
-
-/*GOIT_4 ZADANIE*/
-
-/*
-  positioning svg icon with feature__container
-
-*/
-.feature__icon {
-  background: #f5f4fa;
-  padding: 25px 100px;
-  margin-bottom: 30px;
-}
-/*
-  positioning svg and text into contact__link
-*/
-.contact__link {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.team__info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.contact__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 0 30px 0;
-}
-/*
-  now icons from team__cards have clickable 
-*/
-.contact__icon .icon {
-  cursor: pointer;
-}
-/*
-  change color icon and background color icon
-*/
-.contact__icon .icon:hover,
-.footer__social .contact__icon .icon:hover {
-  --color-background: var(--second-color);
-  --color: var(--first-color);
-}
-/*
-  tags with customers boxes
-*/
-.customer__team {
-  display: flex;
-  justify-content: center;
-}
-/*
-  item with customer icons
-*/
-.customer__box {
-  display: flex;
-  padding: 17.71px 32px 14.25px 32px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  cursor: pointer;
-}
-/*
-  change bored color when user hovering or focusing customer__box
-*/
-.customer__box:hover,
-.customer__box:focus {
-  border: 1px solid var(--second-color);
-}
-/*
-  change svg color when user hovering or focusing customer__box
-*/
-.customer__box:hover .icon,
-.customer__box:focus .icon {
-  color: var(--second-color);
-  --color: var(--second-color);
-}
-/*
-  container with social__text and icons
-*/
-.footer__social {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 72px 0 100px 0;
-}
-.footer__social .contact__icon .icon {
-  --color-background: rgba(255, 255, 255, 0.1);
-  --color: var(--first-color);
-}
-/*
-  text into footer__social
-*/
-.social__text {
-  font-weight: var(--second-weight);
-  line-height: 1.142;
-  letter-spacing: var(--second-letter-spacing);
-  text-transform: uppercase;
-  color: var(--first-color);
-}
-/*
-  social icons into footer container 
-*/
-.footer__social .contact__icon {
-  display: flex;
-  padding: 0;
-}
-
-/*
-  container with logo and contact into footer container
-*/
-.footer__info {
-  padding: 60px 0;
-}
-
-.projects__item {
-  cursor: pointer;
-}
-.projects__item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
