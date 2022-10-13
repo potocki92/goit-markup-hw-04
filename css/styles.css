@@ -106,8 +106,6 @@ body {
   font-family: "Raleway";
   font-size: 26px;
   font-weight: var(--second-weight);
-  line-height: 1.2;
-  font-style: normal;
   letter-spacing: var(--second-letter-spacing);
   color: #000000;
 }
@@ -240,8 +238,6 @@ body {
 */
 .footer__container {
   background: #2f303a;
-  /* position footer */
-  position: relative;
 }
 /*
   padding between logo and footer contact links
@@ -273,7 +269,6 @@ body {
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: var(--second-letter-spacing);
   font-weight: var(--third-weight);
-  font-style: normal;
   line-height: var(--first-line-height);
 }
 /* 
@@ -298,6 +293,10 @@ body {
   margin: 72px 0 100px 0;
 }
 .footer__social .contact__icon .icon {
+  /* 
+    variables from svg file 
+    e.g. facebook.svg has fill="var(--color-background, #FFFFFF)"
+  */
   --color-background: rgba(255, 255, 255, 0.1);
   --color: var(--first-color);
 }
@@ -383,7 +382,6 @@ body {
   main title and button
  */
 .title__container {
-  position: relative;
   /* background of title container */
   background: #2f303a; /* if images doesn't work */
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
