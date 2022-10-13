@@ -143,6 +143,9 @@ body {
 .contact__link:hover,
 .contact__link:focus {
   color: var(--second-color);
+  /* variables from svg file 
+     e.g. fill="var(--color-background, #FFFFFF)"
+  */
   --color: var(--second-color);
 }
 
@@ -293,9 +296,8 @@ body {
   margin: 72px 0 100px 0;
 }
 .footer__social .contact__icon .icon {
-  /* 
-    variables from svg file 
-    e.g. facebook.svg has fill="var(--color-background, #FFFFFF)"
+  /* variables from svg file 
+     e.g. fill="var(--color-background, #FFFFFF)"
   */
   --color-background: rgba(255, 255, 255, 0.1);
   --color: var(--first-color);
@@ -322,6 +324,9 @@ body {
 */
 .contact__icon .icon:hover,
 .footer__social .contact__icon .icon:hover {
+  /* variables from svg file 
+     e.g. fill="var(--color-background, #FFFFFF)"
+  */
   --color-background: var(--second-color);
   --color: var(--first-color);
 }
@@ -613,6 +618,9 @@ body {
 .customer__box:hover .icon,
 .customer__box:focus .icon {
   color: var(--second-color);
+  /* variables from svg file 
+     e.g. fill="var(--color-background, #FFFFFF)"
+  */
   --color: var(--second-color);
 }
 
