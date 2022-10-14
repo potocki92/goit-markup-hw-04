@@ -24,7 +24,7 @@
 
   --border: 1px solid #eeeeee;
 
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: .250s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**********
@@ -133,6 +133,7 @@ body {
   font-weight: var(--first-weight);
   letter-spacing: 0.02em;
   line-height: 1.14;
+  transition: color var(--transition);
 }
 /* change the color of the link text when the user is on the page that corresponds to the link from the navigation */
 .active__link {
@@ -145,11 +146,7 @@ body {
 .contact__link:hover,
 .contact__link:focus {
   color: var(--second-color);
-  /* variables from svg file 
-     e.g. fill="var(--color-background, #FFFFFF)"
-  */
-  --color: var(--second-color);
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 /* contact link color text  */
@@ -298,13 +295,6 @@ body {
   gap: 20px;
   margin: 72px 0 100px 0;
 }
-.footer__social .contact__icon .icon {
-  /* variables from svg file 
-     e.g. fill="var(--color-background, #FFFFFF)"
-  */
-  --color-background: rgba(255, 255, 255, 0.1);
-  --color: var(--first-color);
-}
 /*
   text into footer__social
 */
@@ -321,17 +311,6 @@ body {
 .footer__social .contact__icon {
   display: flex;
   padding: 0;
-}
-/*
-  change color icon and background color icon into footer container
-*/
-.contact__icon .icon:hover,
-.footer__social .contact__icon .icon:hover {
-  /* variables from svg file 
-     e.g. fill="var(--color-background, #FFFFFF)"
-  */
-  --color-background: var(--second-color);
-  --color: var(--first-color);
 }
 /*
   container with logo and contact into footer container
@@ -356,8 +335,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   padding: 0 0 30px 0;
+}
+
+.social__list {
+  gap: 10px;
+}
+
+.social__item .icon .first__svg{
+  fill: var(--first-color);
+  transition: fill var(--transition);
+}
+
+.social__item .icon .second__svg {
+  fill: #AFB1B8;
+  
+  transition: fill var(--transition);
+}
+
+.social__item:hover .icon .first__svg,
+.social__item:focus .icon .first__svg{
+  fill: var(--second-color);
+  transition: fill var(--transition);
+}
+
+.social__item:hover .icon .second__svg,
+.social__item:focus .icon .second__svg{
+  fill: var(--first-color);
+  
+  transition: fill var(--transition);
 }
 /* 
 =====================================
@@ -596,6 +602,7 @@ body {
   padding: 17.71px 32px 14.25px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: #afb1b8;
 }
 /*
   change bored color when user hovering or focusing customer__box
@@ -603,18 +610,8 @@ body {
 .customer__box:hover,
 .customer__box:focus {
   border: 1px solid var(--second-color);
-  transition: var(--transition);
-}
-/*
-  change svg color when user hovering or focusing customer__box
-*/
-.customer__box:hover .icon,
-.customer__box:focus .icon {
   color: var(--second-color);
-  /* variables from svg file 
-     e.g. fill="var(--color-background, #FFFFFF)"
-  */
-  --color: var(--second-color);
+  transition: color var(--transition);
 }
 
 /* 
@@ -681,11 +678,14 @@ body {
     shadow will be showing around the boxes   
   */
 }
+.projects__item {
+  transition: box-shadow var(--transition);
+}
 .projects__item:hover,
 .projects__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: var(--transition);
+  transition: box-shadow var(--transition);
 }
 /* 
   projects heading 
