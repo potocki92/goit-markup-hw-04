@@ -469,8 +469,14 @@ body {
   positioning feature container and feature box
 */
 .feature__container {
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 94px;
+}
+.feature__box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 /*
   space beetwen heading and description text
@@ -679,6 +685,7 @@ body {
   */
 }
 .projects__item {
+  box-shadow: none;
   transition: box-shadow var(--transition);
 }
 .projects__item:hover,
